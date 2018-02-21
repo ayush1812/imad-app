@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 
 var articles= { 
 'article-one': {
-    title:"Article 1",
+    titles:"Article 1",
     heading:"Article One",
     date:"21,02 2018",
     content:` <p>
@@ -39,7 +39,8 @@ var articles= {
             Content inside html page.
         </p>`
 },
-'article-two': {title:"Article 2",
+'article-two': {
+    titles:"Article 2",
     heading:"Article Two",
     date:"21,02 2018",
     content:` <p>
@@ -66,7 +67,8 @@ var articles= {
             Content inside html page.
             Content inside html page.
         </p>`},
-'article-three': {title:"Article 3",
+'article-three': {
+    titles:"Article 3",
     heading:"Article three",
     date:"21,02 2018",
     content:` <p>
@@ -96,7 +98,7 @@ var articles= {
 };
 function createTemplate(data){
     
-    var title=data.title;
+    var titles=data.titles;
     var heading=data.heading;
     var date=data.date;
     var content=data.content;
