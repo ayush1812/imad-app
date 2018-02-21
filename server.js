@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var articleone={
+var articleOne={
     title:"Article 1",
     heading:"Article One",
     date:"21,02 2018",
