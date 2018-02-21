@@ -39,7 +39,7 @@ var articleone={
         </p>`
 };
 
-function createTemplate(data){
+function reateTemplate(data){
     
     var title=data.title;
     var heading=data.heading;
