@@ -9,7 +9,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var articleOne={
+var articles= { 
+'article-one': {
     title:"Article 1",
     heading:"Article One",
     date:"21,02 2018",
@@ -37,8 +38,62 @@ var articleOne={
             Content inside html page.
             Content inside html page.
         </p>`
+},
+'article-two': {title:"Article 2",
+    heading:"Article Two",
+    date:"21,02 2018",
+    content:` <p>
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+        </p>
+        <p>
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+        </p>
+        <p>
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+        </p>`},
+'article-three': {title:"Article 3",
+    heading:"Article three",
+    date:"21,02 2018",
+    content:` <p>
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+        </p>
+        <p>
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+        </p>
+        <p>
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+            Content inside html page.
+        </p>`}
 };
-
 function createTemplate(data){
     
     var title=data.title;
@@ -79,16 +134,10 @@ var htmlTemplate = `
 return htmlTemplate;
 }
 
-app.get('/article-one', function (req, res) {
-   res.send(createTemplate(articleOne))
-});
-
-app.get('/article-two', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
-
-app.get('/article-three', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+app.get('/:articleName', function (req, res) 
+{
+    var articleName=req.params.articleName;
+   res.send(createTemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
