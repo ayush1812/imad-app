@@ -11,15 +11,15 @@ app.get('/', function (req, res) {
 
 
 app.get('/article-one', function (req, res) {
-  res.sendFile("Article 1 requested and served here");
+  res.send("Article 1 requested and served here");
 });
 
 app.get('/article-two', function (req, res) {
-  res.sendFile("Article 2 requested and served here");
+  res.send("Article 2 requested and served here");
 });
 
 app.get('/article-three', function (req, res) {
-  res.sendFile("Article 3 requested and served here");
+  res.send("Article 3 requested and served here");
 });
 
 app.get('/ui/style.css', function (req, res) {
