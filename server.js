@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 
 var articles= { 
 'article-one': {
-    titles:"Article 1",
+  
     heading:"Article One",
     date:"21,02 2018",
     content:` <p>
@@ -40,7 +40,7 @@ var articles= {
         </p>`
 },
 'article-two': {
-    titles:"Article 2",
+
     heading:"Article Two",
     date:"21,02 2018",
     content:` <p>
@@ -68,7 +68,6 @@ var articles= {
             Content inside html page.
         </p>`},
 'article-three': {
-    titles:"Article 3",
     heading:"Article three",
     date:"21,02 2018",
     content:` <p>
@@ -98,7 +97,7 @@ var articles= {
 };
 function createTemplate(data){
     
-    var titles=data.titles;
+
     var heading=data.heading;
     var date=data.date;
     var content=data.content;
@@ -107,7 +106,7 @@ var htmlTemplate = `
 <html>
 <head>
     <title>
-        ${title}
+       Hello
     </title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
       <link href="/ui/style.css" rel="stylesheet" />
